@@ -27,7 +27,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # mongodb for databasin
-gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+# gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+
+gem 'pg'
 
 # foundation for stylin
 gem 'foundation-rails'
@@ -42,5 +44,6 @@ gem 'foundation-rails'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
+gem 'slide-down-alerts-rails'

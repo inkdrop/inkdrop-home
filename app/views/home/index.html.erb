@@ -8,18 +8,18 @@
     <strong>Psst! The first 100 people to join will get 50% off their subscription!</strong></p>
   </div>
 
-  <form>
+  <%= form_for @mail_contact, url: {action: "create_mail_contact"} do |f| %>
     <div class="row">
       <div class="large-3 medium-3 columns">
-        <input type="text" placeholder="First name" autofocus>
+        <%= f.text_field :first_name, :placeholder => "First name", :autofocus => "" %>
       </div>
       <div class="large-3 medium-3 columns">
-        <input type="text" placeholder="Last name">
+        <%= f.text_field :last_name, :placeholder => "Last name" %>
       </div>
       <div class="large-3 medium-3 columns">
-        <input type="text" placeholder="Email">
+        <%= f.text_field :email, :placeholder => "Email" %>
       </div>
-      <a href="#" class="large-3 button">Ok, let's do this!</a>
-    </div>
-  </form>
+      <button type="submit" href="#" class="large-3 button">Ok, let's do this!</button>
+    <div class="row">
+  <% end %>
 </div>

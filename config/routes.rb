@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  post 'subscribe', to: 'home#create_mail_contact'
+
 end

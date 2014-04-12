@@ -12,4 +12,32 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+#title {
+  text-align: center;
+  margin-top: 70px;
+}
+
+#title h2 {
+  margin-top: 110px;
+  color: #1e4c6d;
+}
+
+#title input {
+  height: 3.2rem;
+  font-size: 20px;
+}
+
+.sign-up-label {
+  margin-bottom: 2em;
+  margin-top: 110px;
+  color: #698293;
+}
+
+.sign-up-label p {
+  line-height: 1.5em;
+  font-size: 23px;
+}

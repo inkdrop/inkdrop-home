@@ -8,9 +8,7 @@ class HomeController < ApplicationController
     @mail_contact = MailContact.new(mail_contact_params)
 
     if @mail_contact.save
-      @mail_contact = MailContact.new
-      flash[:notice] = "Thanks for joining, you'll be hearing from us very shortly ;)"
-      render :index
+      redirect_to root_path, notice: "Thanks for joining, you'll be hearing from us very shortly ;)"
     else
       msg = "Ops! Make sure all the data you entered is valid"
       if @mail_contact.errors["email"]

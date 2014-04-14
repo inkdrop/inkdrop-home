@@ -12,7 +12,11 @@ class HomeController < ApplicationController
       flash[:notice] = "Thanks for joining, you'll be hearing from us very shortly ;)"
       render :index
     else
-      flash[:error] = "Ops! Make sure all the data you entered is valid."
+      msg = "Ops! Make sure all the data you entered is valid"
+      if @mail_contact.errors["email"]
+        msg = "This email address has already been registered, try another one"
+      end
+      flash[:error] = msg
       render :index
     end
   end

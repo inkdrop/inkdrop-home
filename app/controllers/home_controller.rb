@@ -6,11 +6,14 @@ class HomeController < ApplicationController
 
   def create_mail_contact
     @mail_contact = MailContact.new(mail_contact_params)
+
     if @mail_contact.save
-      redirect_to root_path, notice: "Thanks for joining, you'll be hearing from us very shortly ;)"
+      @mail_contact = MailContact.new
+      flash[:notice] = "Thanks for joining, you'll be hearing from us very shortly ;)"
+      render :index
     else
       flash[:error] = "Ops! Make sure all the data you entered is valid."
-      render "index"
+      render :index
     end
   end
 

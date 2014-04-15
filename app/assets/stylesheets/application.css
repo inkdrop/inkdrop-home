@@ -18,7 +18,7 @@
 
 html {
   position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 
 .field-with-errors {
@@ -54,22 +54,31 @@ html {
   font-size: 23px;
 }
 
-#footer {
-  background-color: #2E2E2E;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  padding-top: 20px;
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -70px;
 }
 
-#footer a {
+.push {
+  height: 70px;
+}
+
+.footer {
+  background-color: #2E2E2E;
+  height: 70px;
+  padding-top: 20px;
+  clear: both;
+}
+
+.footer a {
   margin: 0 0 0 20px;
   color: #999;
   text-shadow: 0 1px 0 #000;
 }
 
-#footer a:hover {
+.footer a:hover {
   color: #737373;
 }
 

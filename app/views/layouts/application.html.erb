@@ -14,11 +14,12 @@
   </head>
 
   <body>
-    <div class="row">
+    <div class="row wrapper">
       <%= yield %>
+      <div class="push"></div>
     </div>
 
-    <div id="footer">
+    <div class="footer">
       <div class="row">
         <span class="copyright">Inkdrop Labs &#169; <%= DateTime.now.strftime "%Y" %> All rights reserved</span>
         <span class="right">

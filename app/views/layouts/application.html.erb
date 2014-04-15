@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <title><%= content_for?(:title) ? yield(:title) : "inkdrop labs" %></title>
 
@@ -16,6 +17,21 @@
     <div class="row">
       <%= yield %>
     </div>
+
+    <div id="footer">
+      <div class="row">
+        <span class="copyright">Inkdrop Labs &#169; <%= DateTime.now.strftime "%Y" %> All rights reserved</span>
+        <span class="right">
+        <a href="https://www.facebook.com/inkdroplabs" target="new"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="https://twitter.com/inkdroplabs" target="new"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="https://plus.google.com/+InkdropLabsSoftware" target="new"><i class="fa fa-google-plus fa-2x"></i></a>
+        <a href="https://github.com/inkdrop" target="new"><i class="fa fa-github fa-2x"></i></a>
+        <a href="https://bitbucket.org/inkdrop" target="new"><i class="fa fa-bitbucket fa-2x"></i></a>
+        <a href="mailto:contact@inkdroplabs.com"><i class="fa fa-envelope fa-2x"></i></a>
+        </span>
+      </div>
+    </div>
+
     <%= javascript_include_tag "application" %>
     <%= slide_down_alerts %>
     <script>
@@ -26,7 +42,6 @@
 
       ga('create', 'UA-49972032-1', 'inkdroplabs.com');
       ga('send', 'pageview');
-
     </script>
   </body>
 </html>

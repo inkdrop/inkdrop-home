@@ -7,22 +7,22 @@
     <p>Join our mailing list for updates and early access<br>
     <strong>Psst! The first 100 people to join will get 50% off their subscription!</strong></p>
   </div>
-
-  <%= form_for @mail_contact, url: {action: "create_mail_contact"}, html: {data: {abide: ""}} do |f| %>
-    <div class="row">
-      <div class="large-3 medium-3 columns">
-        <%= f.text_field :first_name, :placeholder => "* First name", required: "", class: field_class(@mail_contact, :first_name) %>
-        <small class="error">First name is required and must be a string.</small>
-      </div>
-      <div class="large-3 medium-3 columns">
-        <%= f.text_field :last_name, :placeholder => "* Last name", required: "", class: field_class(@mail_contact, :last_name) %>
-        <small class="error">Last name is required and must be a string.</small>
-      </div>
-      <div class="large-3 medium-3 columns">
-        <%= f.text_field :email, :placeholder => "* Email", class: field_class(@mail_contact, :email), required: "", pattern: "email" %>
-        <small class="error">Email is required and must be a valid format.</small>
-      </div>
-      <button type="submit" href="#" class="large-3 button">Ok, let's do this!</button>
-    <div class="row">
-  <% end %>
 </div>
+
+<%= form_for @mail_contact, url: {action: "create_mail_contact"}, html: {data: {abide: ""}, class: "sign-up"} do |f| %>
+  <div class="row">
+    <div class="large-3 medium-3 columns">
+      <%= f.text_field :first_name, :placeholder => "* First name", required: "", class: field_class(@mail_contact, :first_name) %>
+      <small class="error">First name is required and must be a string.</small>
+    </div>
+    <div class="large-3 medium-3 columns">
+      <%= f.text_field :last_name, :placeholder => "* Last name", required: "", class: field_class(@mail_contact, :last_name) %>
+      <small class="error">Last name is required and must be a string.</small>
+    </div>
+    <div class="large-3 medium-3 columns">
+      <%= f.text_field :email, :placeholder => "* Email", class: field_class(@mail_contact, :email), required: "", pattern: "email" %>
+      <small class="error">Email is required and must be a valid format.</small>
+    </div>
+    <button type="submit" href="#" class="large-3 button">Ok, let's do this!</button>
+  </div>
+<% end %>

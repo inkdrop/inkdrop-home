@@ -14,23 +14,16 @@
   </head>
 
   <body>
-    <div class="row wrapper">
-      <%= yield %>
+    <div class="wrapper">
+      <div class="row">
+        <%= yield %>
+      </div>
+      <%= render partial: "social" %>
       <div class="push"></div>
     </div>
 
-    <div class="footer">
-      <div class="row">
-        <span class="copyright">Inkdrop Labs &#169; <%= DateTime.now.strftime "%Y" %> All rights reserved</span>
-        <span class="right">
-        <a href="https://www.facebook.com/inkdroplabs" target="new"><i class="fa fa-facebook fa-2x"></i></a>
-        <a href="https://twitter.com/inkdroplabs" target="new"><i class="fa fa-twitter fa-2x"></i></a>
-        <a href="https://plus.google.com/+InkdropLabsSoftware" target="new"><i class="fa fa-google-plus fa-2x"></i></a>
-        <a href="https://github.com/inkdrop" target="new"><i class="fa fa-github fa-2x"></i></a>
-        <a href="https://bitbucket.org/inkdrop" target="new"><i class="fa fa-bitbucket fa-2x"></i></a>
-        <a href="mailto:contact@inkdroplabs.com"><i class="fa fa-envelope fa-2x"></i></a>
-        </span>
-      </div>
+    <div class="footer copyright">
+      Inkdrop Labs &#169; <%= DateTime.now.strftime "%Y" %> All rights reserved
     </div>
 
     <%= javascript_include_tag "application" %>

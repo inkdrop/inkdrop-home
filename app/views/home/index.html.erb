@@ -1,4 +1,4 @@
-<div id="title">
+<div id="title" class="large-12 small-12 columns">
   <img src="/assets/inkdrop.png" width="440" height="130">
 
   <h2>We're passionate about software development and we'd love to give everyone a taste of what we're capable of! <i>Ad mundum meliorem</i>.</h2>
@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<%= form_for @mail_contact, url: {action: "create_mail_contact"}, html: {data: {abide: ""}, class: "sign-up"} do |f| %>
+<%= form_for @mail_contact, url: {action: "create_mail_contact"}, html: {data: {abide: ""}, class: "sign-up large-12 small-12 columns"} do |f| %>
   <div class="row">
     <div class="large-3 small-12 columns">
       <%= f.text_field :first_name, :placeholder => "* First name", required: "", class: field_class(@mail_contact, :first_name) %>

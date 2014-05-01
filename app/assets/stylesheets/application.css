@@ -79,17 +79,12 @@ html {
 
 .social {
   text-align: center;
-  color: #275E83;
   margin-bottom: 30px;
   margin-top: 20px;
 }
 
-.social a {
-  color: #F2F2F2;
-}
-
-.social a:hover {
-  color: #EEEEEE;
+.social img {
+  max-width: 3.2rem;
 }
 
 .copyright {
